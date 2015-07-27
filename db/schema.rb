@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727122737) do
+ActiveRecord::Schema.define(version: 20150727141932) do
 
   create_table "expenditures", force: :cascade do |t|
     t.decimal  "price",         precision: 8, scale: 2
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150727122737) do
     t.datetime "purchase_date"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
